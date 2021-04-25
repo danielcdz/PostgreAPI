@@ -1,0 +1,15 @@
+Insert
+Carrera: curl -d '{"idCarrera":'1',"carrera":"Ingenieria en Computacion"}' -H "Content-Type: application/json" -X POST http://localhost:5000/Carreras
+Estudiante: curl -d '{"idEstudiante":'1',"nombre":"Daniel","apellidos":"Calderon","fechaNacimiento":"2000-01-06","telefono":"6196-0524","correoElectronico":"danieldiaz@estudiantec.cr"}' -H "Content-Type: application/json" -X POST http://localhost:5000/Estudiantes
+Cita: curl -d '{"idCita":'1',"idEstudiante":"1","idCarrera":"1","cita":"2004-10-19 10:23:54","tiempoSesion":"04:05:06"}' -H "Content-Type: application/json" -X POST http://localhost:5000/Citas
+
+Update
+curl -d '{"idCita":'1',"idEstudiante":"1","idCarrera":"1","cita":"2004-10-19 10:23:54","tiempoSesion":"04:05:06"}' -H "Content-Type: application/json" -X POST http://localhost:5000/CitasUpdate
+
+
+Delete
+curl -d '{"idCita":'1'}' -H "Content-Type: application/json" -X POST http://localhost:5000/CitasDelete
+
+Select
+curl  http://localhost:5000/GetEstudiante
+
